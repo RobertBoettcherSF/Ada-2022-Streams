@@ -7,7 +7,7 @@ with Point_IO;
 
 procedure Tests is
    S : aliased Memory_Stream.Buffer_Stream (256);
-   P : Point_IO.Point := (X => 11, Y => -4);
+   P : constant Point_IO.Point := (X => 11, Y => -4);
    Q : Point_IO.Point;
 begin
    Point_IO.Point'Write (S'Access, P);
